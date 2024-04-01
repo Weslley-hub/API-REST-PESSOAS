@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Pessoa } from './Models/pessoa.model';
+import { Pessoa } from './models/pessoa.model';
 import { PessoaService } from './pessoa.service';
 import { CommonModule } from '@angular/common';
 import  { Router }  from '@angular/router';
@@ -39,5 +39,9 @@ export class AppComponent implements OnInit{
   
   updatePessoa(id: number) {
     this.routes.navigate(['/editar-pessoa', id]);
+  }
+
+  navigateToCreatePessoa() {
+    this.routes.navigate(['/app-create-pessoa']);
   }
 }
