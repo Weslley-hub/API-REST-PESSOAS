@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Pessoa } from '../Models/pessoa.model';
+import { Pessoa } from '../models/pessoa.model';
 import { PessoaService } from '../pessoa.service';
 import { ActivatedRoute, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
