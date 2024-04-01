@@ -1,0 +1,11 @@
+<main>
+    <div>
+        <h2>Editar Pessoa</h2>
+        <form (ngSubmit)="updatePessoa()">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" [(ngModel)]="pessoaParaEditar.nome" name="nome">
+          <button type="submit">Salvar</button>
+        </form>
+    </div>
+</main>
+<router-outlet />
