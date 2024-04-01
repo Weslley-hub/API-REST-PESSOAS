@@ -67,7 +67,7 @@ export class PessoaService {
       this.axiosInstance.delete<void>(url)
         .then(() => observer.next())
         .catch(error => {
-          observer.error(new DeletePessoaError('Erro ao excluir pessoa: ' + error.message));
+          observer.error(new DeletePessoaError(error.message));
         })
         .finally(() => observer.complete());
     });
