@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterOutlet } from '@angular/router';
 import { Pessoa } from '../models/pessoa.model';
@@ -14,8 +14,6 @@ import { Endereco } from '../models/endereco.model';
   styleUrl: './create-pessoa.component.css'
 })
 export class CreatePessoaComponent {
-  
-  constructor(private pessoaService: PessoaService, private router: Router) { }
 
   newPessoa: Pessoa = {
     id: 0, 
@@ -35,6 +33,8 @@ export class CreatePessoaComponent {
     estado: '',
     cidade: ''
   };
+
+  constructor(private pessoaService: PessoaService, private router: Router) { }
 
   addEndereco() {
     this.newPessoa.enderecos.push(this.newEndereco);

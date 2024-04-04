@@ -6,6 +6,7 @@ import {
   Put,
   Delete,
   Controller,
+  Query,
 } from '@nestjs/common';
 import { Pessoa } from 'src/Models/Pessoa.model';
 import { PessoaService } from 'src/Service/pessoa.service';
@@ -37,5 +38,18 @@ export class PessoaController {
   @Delete(':id')
   deletePessoa(@Param('id') id: string): void {
     return this.pessoaService.deletePessoa(+id);
+  }
+
+  @Get('search/:criteria')
+  searchPessoas(@Param('criteria') criteria: string): Pessoa[] {
+    return this.pessoaService.searchPessoas(criteria);
+  }
+
+  @Get('paginadas')
+  getPessoasPaginadas(
+    @Query('page') page: number,
+    @Query('pageSize') pageSize: number,
+  ): Pessoa[] {
+    return this.pessoaService.getPessoasPaginadas(page, pageSize);
   }
 }

@@ -1,34 +1,50 @@
 <main>
-    <div>
+  <div>
       <h2>Criar Nova Pessoa</h2>
       <form (submit)="createPessoa()">
-        <div>
-          <label for="nome">Nome:</label>
-          <input type="text" id="nome" name="nome" [(ngModel)]="newPessoa.nome" required>
-        </div>
-        <div>
-          <label for="sexo">Sexo:</label>
-          <select id="sexo" name="sexo" [(ngModel)]="newPessoa.sexo" required>
-            <option value="Masculino">Masculino</option>
-            <option value="Feminino">Feminino</option>
-          </select>
-        </div>
-        <div>
-          <label for="estadoCivil">Estado Civil:</label>
-          <select id="estadoCivil" name="estadoCivil" [(ngModel)]="newPessoa.estadoCivil" required>
-            <option value="Solteiro">Solteiro(a)</option>
-            <option value="Casado">Casado(a)</option>
-            <option value="Divorciado">Divorciado(a)</option>
-            <option value="Viúvo">Viúvo(a)</option>
-          </select>
-        </div>
-        <div>
-          <label for="dataNascimento">Data de Nascimento:</label>
-          <input type="date" id="dataNascimento" name="dataNascimento" [(ngModel)]="newPessoa.dataNascimento" required>
-        </div>
+          <div>
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome" [(ngModel)]="newPessoa.nome" required>
+          </div>
+          <div>
+              <label for="sexo">Sexo:</label>
+              <select id="sexo" name="sexo" [(ngModel)]="newPessoa.sexo" required>
+                  <option value="Masculino">Masculino</option>
+                  <option value="Feminino">Feminino</option>
+              </select>
+          </div>
+          <div>
+              <label for="estadoCivil">Estado Civil:</label>
+              <select id="estadoCivil" name="estadoCivil" [(ngModel)]="newPessoa.estadoCivil" required>
+                  <option value="Solteiro">Solteiro(a)</option>
+                  <option value="Casado">Casado(a)</option>
+                  <option value="Divorciado">Divorciado(a)</option>
+                  <option value="Viúvo">Viúvo(a)</option>
+              </select>
+          </div>
+          <div>
+              <label for="dataNascimento">Data de Nascimento:</label>
+              <input type="date" id="dataNascimento" name="dataNascimento" [(ngModel)]="newPessoa.dataNascimento" required>
+          </div>
+          <div>
+            <h3>Endereço</h3>
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" [(ngModel)]="newEndereco.cep" required>
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" [(ngModel)]="newEndereco.endereco" required>
+            <label for="numero">Número:</label>
+            <input type="text" id="numero" name="numero" [(ngModel)]="newEndereco.numero" required>
+            <label for="complemento">Complemento:</label>
+            <input type="text" id="complemento" name="complemento" [(ngModel)]="newEndereco.complemento">
+            <label for="bairro">Bairro:</label>
+            <input type="text" id="bairro" name="bairro" [(ngModel)]="newEndereco.bairro" required>
+            <label for="estado">Estado:</label>
+            <input type="text" id="estado" name="estado" [(ngModel)]="newEndereco.estado" required>
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" [(ngModel)]="newEndereco.cidade" required>
+        </div>        
         <button type="submit">Criar</button>
       </form>
-    </div>
-  </main>
-  <router-outlet />
-  
+  </div>
+</main>
+<router-outlet />

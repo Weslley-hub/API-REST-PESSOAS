@@ -36,7 +36,7 @@ export class PessoaService {
         .finally(() => observer.complete());
     })
   }
-
+  
   getPessoaById(id: number): Observable<Pessoa> {
     const url = `${this.apiUrl}/${id}`;
     return new Observable((observer) => {

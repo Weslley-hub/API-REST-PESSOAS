@@ -31,4 +31,19 @@ export class PessoaService {
   deletePessoa(id: number): void {
     this.pessoas = this.pessoas.filter((p) => p.id !== id);
   }
+
+  searchPessoas(criteria: string): Pessoa[] {
+    return this.pessoas.filter(
+      (pessoa) =>
+        pessoa.nome.includes(criteria) ||
+        pessoa.sexo.includes(criteria) ||
+        pessoa.estadoCivil.includes(criteria),
+    );
+  }
+
+  getPessoasPaginadas(page: number, pageSize: number): Pessoa[] {
+    const startIndex = (page - 1) * pageSize;
+    const endIndex = startIndex + pageSize;
+    return this.pessoas.slice(startIndex, endIndex);
+  }
 }

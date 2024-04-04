@@ -1,11 +1,35 @@
 <main>
-    <div>
-        <h2>Editar Pessoa</h2>
-        <form (ngSubmit)="updatePessoa()">
-          <label for="nome">Nome:</label>
-          <input type="text" id="nome" [(ngModel)]="pessoaParaEditar.nome" name="nome">
-          <button type="submit">Salvar</button>
-        </form>
-    </div>
+  <div>
+      <h2>Editar Pessoa</h2>
+      <form (ngSubmit)="updatePessoa()">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" [(ngModel)]="pessoaParaEditar.nome" name="nome">
+        <label for="sexo">Sexo:</label>
+        <input type="text" id="sexo" [(ngModel)]="pessoaParaEditar.sexo" name="sexo">
+        <label for="dataNascimento">Data de Nascimento:</label>
+        <input type="text" id="dataNascimento" [(ngModel)]="pessoaParaEditar.dataNascimento" name="dataNascimento">
+        <label for="estadoCivil">Estado Civil:</label>
+        <input type="text" id="estadoCivil" [(ngModel)]="pessoaParaEditar.estadoCivil" name="estadoCivil">
+        <h3>Endereços:</h3>
+        <div *ngFor="let endereco of pessoaParaEditar.enderecos">
+          <label for="cep">CEP:</label>
+          <input type="text" id="cep" [(ngModel)]="endereco.cep" name="cep">
+          <label for="endereco">Endereço:</label>
+          <input type="text" id="endereco" [(ngModel)]="endereco.endereco" name="endereco">
+          <label for="numero">Número:</label>
+          <input type="text" id="numero" [(ngModel)]="endereco.numero" name="numero">
+          <label for="complemento">Complemento:</label>
+          <input type="text" id="complemento" [(ngModel)]="endereco.complemento" name="complemento">
+          <label for="bairro">Bairro:</label>
+          <input type="text" id="bairro" [(ngModel)]="endereco.bairro" name="bairro">
+          <label for="estado">Estado:</label>
+          <input type="text" id="estado" [(ngModel)]="endereco.estado" name="estado">
+          <label for="cidade">Cidade:</label>
+          <input type="text" id="cidade" [(ngModel)]="endereco.cidade" name="cidade">
+        </div>
+        <button type="submit">Salvar</button>
+      </form>
+  </div>
 </main>
 <router-outlet />
+

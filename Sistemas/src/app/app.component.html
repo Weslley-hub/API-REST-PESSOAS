@@ -3,10 +3,26 @@
     <h2>Lista de Usuários</h2>
     <ul>
       <li *ngFor="let pessoa of pessoas">
-        {{ pessoa.nome }}
-        {{ pessoa.sexo }}
-        {{ pessoa.dataNascimento }}
-        {{ pessoa.estadoCivil }}
+        <div>
+          <strong>Nome:</strong> {{ pessoa.nome }}<br>
+          <strong>Sexo:</strong> {{ pessoa.sexo }}<br>
+          <strong>Data de Nascimento:</strong> {{ pessoa.dataNascimento }}<br>
+          <strong>Estado Civil:</strong> {{ pessoa.estadoCivil }}<br>
+          <strong>Endereço:</strong>
+          <ul>
+            <li *ngFor="let endereco of pessoa.enderecos">
+              <div>
+                <strong>CEP:</strong> {{ endereco.cep }}<br>
+                <strong>Endereço:</strong> {{ endereco.endereco }}<br>
+                <strong>Número:</strong> {{ endereco.numero }}<br>
+                <strong>Bairro:</strong> {{ endereco.bairro }}<br>
+                <strong>Estado:</strong> {{ endereco.estado }}<br>
+                <strong>Cidade:</strong> {{ endereco.cidade }}<br>
+              </div>
+            </li>
+          </ul>
+        </div>
+        
         <button (click)="deletePessoa(pessoa.id)">Excluir</button>
         <button (click)="updatePessoa(pessoa.id)">Editar</button>
       </li>
