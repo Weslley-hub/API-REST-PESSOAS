@@ -12,6 +12,14 @@ Atualização de Pessoas: Permite atualizar as informações de uma pessoa exist
 
 Exclusão de Pessoas: Permite remover uma pessoa cadastrada do sistema.
 
+Busca componentes de endereço pelo CEP
+
+Conta data de nascimento de uma pessoa
+
+Deseja feliz aniversario se for o aniversario da pessoa
+
+Validação de campos
+
 Diferenciais
 Tecnologias Utilizadas: Utilizamos o framework NestJS no back end e Angular no front end, proporcionando uma arquitetura robusta e uma experiência de usuário moderna.
 
