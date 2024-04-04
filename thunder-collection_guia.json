@@ -1,0 +1,103 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "guia",
+    "dateExported": "2024-04-04T20:06:40.781Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "bcbb5035-4fa9-4fa2-be4f-49bda0dff692",
+            "colId": "a3d3c64e-308c-4e64-8124-f5ee55d65b27",
+            "containerId": "",
+            "name": "Pesquisa",
+            "url": "http://localhost:3000/pessoas/search/Fulano",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-04-04T20:06:04.504Z",
+            "modified": "2024-04-04T20:06:04.504Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c1c60252-3bb7-4907-9326-7f9454cfcc8f",
+            "colId": "a3d3c64e-308c-4e64-8124-f5ee55d65b27",
+            "containerId": "",
+            "name": "Get com paginação",
+            "url": "http://localhost:3000/pessoas/paginadas",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-04-04T20:06:10.203Z",
+            "modified": "2024-04-04T20:06:10.203Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ce57145f-2663-4070-9248-77098176849c",
+            "colId": "a3d3c64e-308c-4e64-8124-f5ee55d65b27",
+            "containerId": "",
+            "name": "Update",
+            "url": "http://localhost:3000/pessoas/7",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-04-04T20:06:17.038Z",
+            "modified": "2024-04-04T20:06:17.038Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Weslley\",\n  \"sexo\": \"M\",\n  \"dataNascimento\": \"1990-01-01\",\n  \"estadoCivil\": \"Solteiro\",\n  \"enderecos\": [\n    {\n      \"cep\": \"00000-000\",\n      \"endereco\": \"Rua Teste\",\n      \"numero\": \"123\",\n      \"complemento\": \"\",\n      \"bairro\": \"Centro\",\n      \"estado\": \"SP\",\n      \"cidade\": \"São Paulo\"\n    }\n  ]\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "0e2bfb6e-793c-4d39-b896-fa80b437a0d3",
+            "colId": "a3d3c64e-308c-4e64-8124-f5ee55d65b27",
+            "containerId": "",
+            "name": "PROCURA POR ID",
+            "url": "http://localhost:3000/pessoas/1",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-04-04T20:06:24.086Z",
+            "modified": "2024-04-04T20:06:24.086Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ef299030-c1bd-4165-8c3c-434d4a631c05",
+            "colId": "a3d3c64e-308c-4e64-8124-f5ee55d65b27",
+            "containerId": "",
+            "name": "CRIA",
+            "url": "http://localhost:3000/pessoas",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-04-04T20:06:27.980Z",
+            "modified": "2024-04-04T20:06:27.980Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Fulano 3\",\n  \"sexo\": \"M\",\n  \"dataNascimento\": \"1990-01-01\",\n  \"estadoCivil\": \"Solteiro\",\n  \"enderecos\": [\n    {\n      \"cep\": \"00000-000\",\n      \"endereco\": \"Rua Teste\",\n      \"numero\": \"123\",\n      \"complemento\": \"\",\n      \"bairro\": \"Centro\",\n      \"estado\": \"SP\",\n      \"cidade\": \"São Paulo\"\n    }\n  ]\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "33e34fa9-1287-416d-a908-530c36820845",
+            "colId": "a3d3c64e-308c-4e64-8124-f5ee55d65b27",
+            "containerId": "",
+            "name": "LISTA TODOS",
+            "url": "http://localhost:3000/pessoas",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-04-04T20:06:31.184Z",
+            "modified": "2024-04-04T20:06:31.184Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

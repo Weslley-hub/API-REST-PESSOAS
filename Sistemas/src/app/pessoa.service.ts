@@ -3,6 +3,8 @@ import axios, { AxiosInstance } from 'axios';
 import { Observable, throwError } from 'rxjs';
 import { Pessoa } from './models/pessoa.model';
 import { CreatePessoaError, DeletePessoaError, GetAllPessoasError, GetPessoaByIdError, UpdatePessoaError } from './errors/http-errors';
+import { response } from 'express';
+import { error } from 'console';
 
 @Injectable({
   providedIn: 'root'
@@ -70,6 +72,19 @@ export class PessoaService {
           observer.error(new DeletePessoaError(error.message));
         })
         .finally(() => observer.complete());
+    });
+  }
+
+  searchPessoas(criteria: string): Observable<Pessoa[]> {
+    const url = `${this.apiUrl}/search?criteria=${criteria}`;
+
+    return new Observable((observer) => {
+      this.axiosInstance.get<Pessoa[]>(this.apiUrl)
+      .then(response => observer.next(response.data))
+      .catch(error => {
+        observer.error(new GetAllPessoasError(error.message));
+      })
+      .finally(() => observer.complete());
     });
   }
 }

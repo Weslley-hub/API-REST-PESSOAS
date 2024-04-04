@@ -1,6 +1,7 @@
 <main>
   <div>
     <h2>Lista de Usuários</h2>
+    
     <ul>
       <li *ngFor="let pessoa of pessoas">
         <div>
@@ -22,13 +23,12 @@
             </li>
           </ul>
         </div>
-        
         <button (click)="deletePessoa(pessoa.id)">Excluir</button>
         <button (click)="updatePessoa(pessoa.id)">Editar</button>
       </li>
     </ul>
   </div>
-  <button (click)="navigateToCreatePessoa()">Criar Nova Pessoa</button>
+  <button (click)="navigateToCreatePessoa()">Cadastrar Nova Pessoa</button>
 </main>
 
 <router-outlet />

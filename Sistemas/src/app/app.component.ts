@@ -15,6 +15,7 @@ import  { Router }  from '@angular/router';
 
 export class AppComponent implements OnInit{
   pessoas: Pessoa[] = [];
+  searchText: string = '';
   
   constructor(private pessoaService: PessoaService, private routes: Router) {}
 
@@ -44,4 +45,13 @@ export class AppComponent implements OnInit{
   navigateToCreatePessoa() {
     this.routes.navigate(['/app-create-pessoa']);
   }
+
+  searchPessoas() {
+    const searchTerm = (document.getElementById('txtSearch') as HTMLInputElement).value;
+    if (searchTerm.trim() !== '') {
+        this.pessoaService.searchPessoas(searchTerm).subscribe(pessoas => {
+        this.pessoas = pessoas;
+      });
+  }}
+
 }
